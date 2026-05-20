@@ -162,3 +162,7 @@ const prometheus = new k8s.helm.v3.Chart("prometheus", {
 });
 
 export const monitoringNamespaceName = monitoringNamespace.metadata.name;
+export const grafanaServiceName = "prometheus-grafana";
+export const grafanaAccessCommand = "minikube service prometheus-grafana -n monitoring";
+export const grafanaUsername = "admin";
+export const grafanaPassword = "prom-operator";
